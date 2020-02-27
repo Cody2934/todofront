@@ -10,7 +10,7 @@ export default class TodoAppLogin extends Component {
     }
 
     handleSignIn = async () => {
-        const signIn = await request.post(`http://localhost:${process.env.REACT_APP_BACK_END_PORT}/api/auth/signin`, {
+        const signIn = await request.post(`https://tranquil-temple-40759.herokuapp.com/api/auth/signin`, {
             email: this.state.usernameSignIn,
             password: this.state.passwordSignIn,
         })
@@ -19,7 +19,7 @@ export default class TodoAppLogin extends Component {
     }
 
     handleSignUp = async () => {
-        const signUp = await request.post(`http://localhost:${process.env.REACT_APP_BACK_END_PORT}/api/auth/signup`, {
+        const signUp = await request.post(`https://tranquil-temple-40759.herokuapp.com/api/auth/signup`, {
             email: this.state.usernameSignUp,
             password: this.state.passwordSignUp,
         })
